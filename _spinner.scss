@@ -1,0 +1,50 @@
+.mx-progress{
+    //change size, shape, and color of background
+    background: transparent;
+    opacity: .8;
+    .mx-progress-message{
+        //change message styling
+    }
+    .mx-progress-indicator {
+        //change the indicator with a different gif or use css animation on a icon font
+        width: 100%; // if using a gif this should match your gif's width
+        height: 100%;// if using a gif this should match your gif's height
+        margin: auto;
+        text-align: center;
+        background: none; //if using a gif place it here
+        // use for a stepped animation
+        //-webkit-animation: fa-spin 1s infinite steps(8);
+        //animation: fa-spin 1s infinite steps(8);
+        
+        // use for a fluid animation
+        -webkit-animation: fa-spin 1.5s infinite linear;// the timing can be changed for faster or slower aanimation
+        animation: fa-spin 1.5s infinite linear;
+        &:before{
+            font-family: 'Glyphicons Halflings'; // you can change the  font family to anything here
+            color: #fff;
+            content: "\e031"; // this can be any character within the above font
+            font-size: 36px;
+        }
+    }
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
